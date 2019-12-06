@@ -65,9 +65,11 @@ export default class Server {
     }
 
 
-    start( callback: Function ) {
+    start(  ) {
 
-        this.httpServer.listen( this.port, callback );
+        this.httpServer.listen( this.port, ()=>{
+              console.log(`Application start: listening on port ${this.port}!`)
+        });
 
     }
 
